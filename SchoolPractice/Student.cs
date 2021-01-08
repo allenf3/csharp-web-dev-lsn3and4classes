@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Text;
+
 namespace SchoolPractice
 {
     public class Student
@@ -30,7 +32,6 @@ namespace SchoolPractice
         // TODO: Complete the AddGrade method.
         public void AddGrade(int courseCredits, double grade)
         {
-            // Update the appropriate properties: NumberOfCredits, Gpa
         }
 
         //TODO: Complete the GetGradeLevel method here:
@@ -42,6 +43,16 @@ namespace SchoolPractice
 
         // TODO: Add your custom 'ToString' method here. Make sure it returns a well-formatted string rather
         //  than just the class fields.
+
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append($"{Name} (ID: {StudentId})\r\n");
+            sb.Append($"\tCredits: {NumberOfCredits}\r\n");
+            sb.Append($"\tGPA: {Gpa}\r\n");
+            return sb.ToString();
+        }
 
         // TODO: Add your custom 'Equals' method here. Consider which fields should match in order to call two
         //  Student objects equal.
