@@ -32,6 +32,10 @@ namespace SchoolPractice
         // TODO: Complete the AddGrade method.
         public void AddGrade(int courseCredits, double grade)
         {
+            double pointsEarned = Gpa * NumberOfCredits;
+            pointsEarned += grade * courseCredits;
+            NumberOfCredits += courseCredits;
+            Gpa = pointsEarned / NumberOfCredits;
         }
 
         //TODO: Complete the GetGradeLevel method here:
